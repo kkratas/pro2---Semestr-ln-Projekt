@@ -9,7 +9,7 @@ public abstract class Screen extends JPanel {
 	protected MainFrame mainFrame;
 
 	public Screen(MainFrame mainFrame) {
-		this.mainFrame = new MainFrame();
+		this.mainFrame = mainFrame;
 	}
 
 }
