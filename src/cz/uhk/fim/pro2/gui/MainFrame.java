@@ -2,9 +2,6 @@ package cz.uhk.fim.pro2.gui;
 
 import javax.swing.JFrame;
 
-import cz.uhk.fim.pro2.game.HomeScreen;
-import cz.uhk.fim.pro2.game.Screen;
-
 public class MainFrame extends JFrame {
 	
 	public static final int WIDTH = 480;
