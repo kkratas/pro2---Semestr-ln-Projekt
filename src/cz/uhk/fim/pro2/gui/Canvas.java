@@ -2,7 +2,11 @@ package cz.uhk.fim.pro2.gui;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.ArrayList;
 
+import cz.uhk.fim.pro2.model.Bird;
+import cz.uhk.fim.pro2.model.Heart;
+import cz.uhk.fim.pro2.model.Tube;
 import cz.uhk.fim.pro2.model.World;
 
 public class Canvas extends java.awt.Canvas{
@@ -16,7 +20,14 @@ public class Canvas extends java.awt.Canvas{
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
-		g.drawRect(world.getBird().getPositionX(), world.getBird().getPositionY(), 50, 50);
+		world.getBird().paint(g);
+		for (Heart heart : world.getHearts()) {
+			heart.paint(g);
+		}
+		for (Tube tube : world.getTubes()){
+			tube.paint(g);
+		}
 	}
+	
 
 }

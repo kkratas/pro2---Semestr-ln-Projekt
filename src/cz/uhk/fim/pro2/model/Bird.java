@@ -1,5 +1,8 @@
 package cz.uhk.fim.pro2.model;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 public class Bird {
 	private String name;
 	private int positionX,positionY;
@@ -49,6 +52,15 @@ public class Bird {
 
 	public void setPositionY(int positionY) {
 		this.positionY = positionY;
+	}
+	public void paint(Graphics g){
+		g.setColor(Color.BLUE);
+		
+		g.fillRect((int) (getPositionX())-25, (int)(getPositionY())-25, 50, 50);
+	}
+	
+	public void update(float deltaTime){
+		positionX += World.SPEED * deltaTime;
 	}
 
 	public void goUp(){
